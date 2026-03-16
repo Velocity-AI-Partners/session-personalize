@@ -1,5 +1,5 @@
 // ── Configuration ──────────────────────────────────────────────
-const WEBHOOK_URL = 'PLACEHOLDER_WEBHOOK_URL'; // n8n webhook, set after workflow is created
+const WEBHOOK_URL = 'https://velocityaipartners.app.n8n.cloud/webhook/session-personalize';
 
 const SUPABASE_URL = 'https://jjckotsrhuxxftwmdlwc.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpqY2tvdHNyaHV4eGZ0d21kbHdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY0NzU1ODIsImV4cCI6MjA1MjA1MTU4Mn0.GFaaGXBkFr9gy3WuRLqB-Y1kBWBygX6sJFJmX_KJ_iE';
