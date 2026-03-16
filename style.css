@@ -6,42 +6,48 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f8f9fa;
-  color: #1a1a2e;
+  background: #ffffff;
+  color: #000000;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  max-width: 560px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 24px 20px 40px;
+  padding: 0 20px 40px;
 }
 
 /* Header */
 .header {
   text-align: center;
-  margin-bottom: 32px;
+  padding: 32px 0 24px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 28px;
 }
 
 .logo {
-  width: 120px;
-  height: auto;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   margin-bottom: 16px;
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .header h1 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1a1a2e;
+  color: #000000;
+  letter-spacing: -0.3px;
 }
 
 .subtitle {
-  font-size: 14px;
-  color: #6b7280;
+  font-size: 15px;
+  color: #000000;
   line-height: 1.5;
+  opacity: 0.6;
 }
 
 /* Field groups */
@@ -54,12 +60,13 @@ body {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 4px;
-  color: #1a1a2e;
+  color: #000000;
 }
 
 .field-hint {
   font-size: 13px;
-  color: #9ca3af;
+  color: #000000;
+  opacity: 0.45;
   margin-bottom: 12px;
 }
 
@@ -71,53 +78,55 @@ body {
 }
 
 .chip {
-  padding: 8px 16px;
-  border: 2px solid #e5e7eb;
-  border-radius: 24px;
-  background: #fff;
+  padding: 10px 18px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 100px;
+  background: #f7f7f8;
   font-family: inherit;
   font-size: 14px;
   font-weight: 500;
-  color: #374151;
+  color: #000000;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
   user-select: none;
 }
 
 .chip:hover {
-  border-color: #a5b4fc;
-  background: #f0f0ff;
+  border-color: #b0b0b0;
+  background: #eeeeef;
 }
 
 .chip.selected {
-  border-color: #6366f1;
-  background: #6366f1;
-  color: #fff;
+  border-color: #000000;
+  background: #000000;
+  color: #ffffff;
 }
 
 /* Textareas */
 textarea {
   width: 100%;
-  padding: 12px 14px;
-  border: 2px solid #e5e7eb;
-  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 14px;
   font-family: inherit;
   font-size: 15px;
   line-height: 1.5;
-  color: #1a1a2e;
-  background: #fff;
+  color: #000000;
+  background: #f7f7f8;
   resize: vertical;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 textarea:focus {
   outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  border-color: #000000;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
 }
 
 textarea::placeholder {
-  color: #c4c9d4;
+  color: #000000;
+  opacity: 0.3;
 }
 
 /* Intensity cards */
@@ -139,58 +148,66 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 16px 8px;
-  border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  background: #fff;
-  transition: all 0.15s ease;
+  gap: 6px;
+  padding: 20px 8px 16px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 16px;
+  background: #f7f7f8;
+  transition: all 0.2s ease;
   text-align: center;
 }
 
 .intensity-card:hover .intensity-content {
-  border-color: #a5b4fc;
-  background: #f0f0ff;
+  border-color: #b0b0b0;
+  background: #eeeeef;
 }
 
 .intensity-card input:checked + .intensity-content {
-  border-color: #6366f1;
-  background: #eef2ff;
+  border-color: #000000;
+  background: #000000;
+  color: #ffffff;
+}
+
+.intensity-card input:checked + .intensity-content .intensity-name,
+.intensity-card input:checked + .intensity-content .intensity-desc {
+  color: #ffffff;
 }
 
 .intensity-icon {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .intensity-name {
   font-size: 14px;
   font-weight: 600;
-  color: #1a1a2e;
+  color: #000000;
 }
 
 .intensity-desc {
   font-size: 11px;
-  color: #9ca3af;
+  color: #000000;
+  opacity: 0.5;
 }
 
 /* Submit button */
 .submit-btn {
   width: 100%;
-  padding: 16px;
+  padding: 18px;
   border: none;
-  border-radius: 12px;
-  background: #6366f1;
-  color: #fff;
+  border-radius: 14px;
+  background: #000000;
+  color: #ffffff;
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
+  transition: opacity 0.15s ease, transform 0.1s ease;
   margin-top: 8px;
+  letter-spacing: -0.2px;
 }
 
 .submit-btn:hover {
-  background: #4f46e5;
+  opacity: 0.85;
 }
 
 .submit-btn:active {
@@ -198,7 +215,7 @@ textarea::placeholder {
 }
 
 .submit-btn:disabled {
-  background: #a5b4fc;
+  opacity: 0.4;
   cursor: not-allowed;
   transform: none;
 }
@@ -206,7 +223,7 @@ textarea::placeholder {
 /* Success screen */
 .success-content {
   text-align: center;
-  padding: 48px 20px;
+  padding: 64px 20px;
 }
 
 .success-icon {
@@ -215,26 +232,28 @@ textarea::placeholder {
 }
 
 .success-content h2 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #1a1a2e;
+  color: #000000;
 }
 
 .success-content p {
   font-size: 15px;
-  color: #6b7280;
+  color: #000000;
+  opacity: 0.6;
   line-height: 1.6;
 }
 
 /* Error banner */
 .error-banner {
-  padding: 12px 16px;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 10px;
-  color: #dc2626;
+  padding: 14px 16px;
+  background: #fff0f0;
+  border: 1.5px solid #ffcccc;
+  border-radius: 14px;
+  color: #cc0000;
   font-size: 14px;
+  font-weight: 500;
   text-align: center;
   margin-top: 12px;
 }
@@ -247,7 +266,11 @@ textarea::placeholder {
 /* Mobile tweaks */
 @media (max-width: 400px) {
   .container {
-    padding: 16px 14px 32px;
+    padding: 0 16px 32px;
+  }
+
+  .header {
+    padding: 24px 0 20px;
   }
 
   .header h1 {
@@ -255,16 +278,15 @@ textarea::placeholder {
   }
 
   .intensity-options {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
+    gap: 8px;
   }
 
   .intensity-content {
-    padding: 12px 4px;
+    padding: 16px 4px 12px;
   }
 
   .chip {
-    padding: 6px 12px;
+    padding: 8px 14px;
     font-size: 13px;
   }
 }

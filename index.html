@@ -20,51 +20,7 @@
 
     <!-- Form -->
     <form id="personalize-form" novalidate>
-      <!-- 1. Focus Areas (multi-select chips) -->
-      <div class="field-group">
-        <label class="field-label">Where would you like us to focus?</label>
-        <p class="field-hint">Select all areas that apply</p>
-        <div class="chip-grid" id="focus-areas">
-          <button type="button" class="chip" data-value="neck">Neck</button>
-          <button type="button" class="chip" data-value="shoulders">Shoulders</button>
-          <button type="button" class="chip" data-value="upper-back">Upper Back</button>
-          <button type="button" class="chip" data-value="lower-back">Lower Back</button>
-          <button type="button" class="chip" data-value="hips">Hips</button>
-          <button type="button" class="chip" data-value="hamstrings">Hamstrings</button>
-          <button type="button" class="chip" data-value="legs">Legs</button>
-          <button type="button" class="chip" data-value="full-body">Full Body</button>
-        </div>
-      </div>
-
-      <!-- 2. Goals (multi-select chips) -->
-      <div class="field-group">
-        <label class="field-label">What are your goals?</label>
-        <p class="field-hint">Select all that apply</p>
-        <div class="chip-grid" id="goals">
-          <button type="button" class="chip" data-value="flexibility">Improve Flexibility</button>
-          <button type="button" class="chip" data-value="pain-relief">Pain Relief</button>
-          <button type="button" class="chip" data-value="athletic-recovery">Athletic Recovery</button>
-          <button type="button" class="chip" data-value="stress-relief">Stress Relief</button>
-          <button type="button" class="chip" data-value="posture">Posture Improvement</button>
-          <button type="button" class="chip" data-value="range-of-motion">Range of Motion</button>
-        </div>
-      </div>
-
-      <!-- 3. Injuries / Medical Conditions -->
-      <div class="field-group">
-        <label class="field-label" for="injuries">Any injuries or medical conditions?</label>
-        <p class="field-hint">Surgeries, joint replacements, chronic conditions, current pain areas</p>
-        <textarea id="injuries" name="injuries" rows="3" placeholder="e.g., Had knee surgery last year, mild lower back pain..."></textarea>
-      </div>
-
-      <!-- 4. Physical Activity -->
-      <div class="field-group">
-        <label class="field-label" for="activity">What physical activities do you do?</label>
-        <p class="field-hint">Exercise habits, sports, frequency</p>
-        <textarea id="activity" name="activity" rows="2" placeholder="e.g., Run 3x/week, play tennis on weekends, weight training..."></textarea>
-      </div>
-
-      <!-- 5. Stretch Intensity -->
+      <!-- 1. Stretch Intensity (moved to top) -->
       <div class="field-group">
         <label class="field-label">Preferred stretch intensity</label>
         <div class="intensity-options" id="intensity">
@@ -93,6 +49,50 @@
             </div>
           </label>
         </div>
+      </div>
+
+      <!-- 2. Focus Areas (multi-select chips) -->
+      <div class="field-group">
+        <label class="field-label">Where would you like us to focus?</label>
+        <p class="field-hint">Select all areas that apply</p>
+        <div class="chip-grid" id="focus-areas">
+          <button type="button" class="chip" data-value="neck">Neck</button>
+          <button type="button" class="chip" data-value="shoulders">Shoulders</button>
+          <button type="button" class="chip" data-value="upper-back">Upper Back</button>
+          <button type="button" class="chip" data-value="lower-back">Lower Back</button>
+          <button type="button" class="chip" data-value="hips">Hips</button>
+          <button type="button" class="chip" data-value="hamstrings">Hamstrings</button>
+          <button type="button" class="chip" data-value="legs">Legs</button>
+          <button type="button" class="chip" data-value="full-body">Full Body</button>
+        </div>
+      </div>
+
+      <!-- 3. Goals (multi-select chips) -->
+      <div class="field-group">
+        <label class="field-label">What are your goals?</label>
+        <p class="field-hint">Select all that apply</p>
+        <div class="chip-grid" id="goals">
+          <button type="button" class="chip" data-value="flexibility">Improve Flexibility</button>
+          <button type="button" class="chip" data-value="pain-relief">Pain Relief</button>
+          <button type="button" class="chip" data-value="athletic-recovery">Athletic Recovery</button>
+          <button type="button" class="chip" data-value="stress-relief">Stress Relief</button>
+          <button type="button" class="chip" data-value="posture">Posture Improvement</button>
+          <button type="button" class="chip" data-value="range-of-motion">Range of Motion</button>
+        </div>
+      </div>
+
+      <!-- 4. Injuries / Medical Conditions -->
+      <div class="field-group">
+        <label class="field-label" for="injuries">Any injuries or medical conditions?</label>
+        <p class="field-hint">Surgeries, joint replacements, chronic conditions, current pain areas</p>
+        <textarea id="injuries" name="injuries" rows="3" placeholder="e.g., Had knee surgery last year, mild lower back pain..."></textarea>
+      </div>
+
+      <!-- 5. Physical Activity -->
+      <div class="field-group">
+        <label class="field-label" for="activity">What physical activities do you do?</label>
+        <p class="field-hint">Exercise habits, sports, frequency</p>
+        <textarea id="activity" name="activity" rows="2" placeholder="e.g., Run 3x/week, play tennis on weekends, weight training..."></textarea>
       </div>
 
       <!-- 6. Lifestyle / Occupation -->
