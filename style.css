@@ -47,7 +47,6 @@ body {
   font-size: 15px;
   color: #000000;
   line-height: 1.5;
-  opacity: 0.6;
 }
 
 /* Field groups */
@@ -66,7 +65,6 @@ body {
 .field-hint {
   font-size: 13px;
   color: #000000;
-  opacity: 0.45;
   margin-bottom: 12px;
 }
 
@@ -125,8 +123,7 @@ textarea:focus {
 }
 
 textarea::placeholder {
-  color: #000000;
-  opacity: 0.3;
+  color: #888888;
 }
 
 /* Intensity cards */
@@ -186,7 +183,6 @@ textarea::placeholder {
 .intensity-desc {
   font-size: 11px;
   color: #000000;
-  opacity: 0.5;
 }
 
 /* Submit button */
@@ -241,7 +237,6 @@ textarea::placeholder {
 .success-content p {
   font-size: 15px;
   color: #000000;
-  opacity: 0.6;
   line-height: 1.6;
 }
 
