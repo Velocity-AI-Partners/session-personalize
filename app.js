@@ -26,14 +26,6 @@ const LOCATIONS = {
   'stretchlab-carlsbad': {
     name: 'StretchLab Carlsbad',
     logo: LOGO_BASE + 'stretchlab-carlsbad-1771338129474.webp'
-  },
-  'integrated-martial-arts-westborough': {
-    name: 'IMA Westborough',
-    logo: LOGO_BASE + 'integrated-martial-arts-westborough-1771600419957.png'
-  },
-  'integrated-martial-arts-worcester': {
-    name: 'IMA Worcester',
-    logo: LOGO_BASE + 'integrated-martial-arts-worcester-1771600412395.png'
   }
 };
 
