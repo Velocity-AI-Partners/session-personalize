@@ -76,12 +76,37 @@ document.querySelectorAll('.chip-grid').forEach(function(grid) {
     var chip = e.target.closest('.chip');
     if (!chip) return;
     chip.classList.toggle('selected');
+
+    // Toggle "Other" input visibility
+    if (chip.classList.contains('chip-other')) {
+      var inputId = chip.id.replace('-chip', '-input');
+      var otherInput = document.getElementById(inputId);
+      if (otherInput) {
+        if (chip.classList.contains('selected')) {
+          otherInput.classList.remove('hidden');
+          otherInput.focus();
+        } else {
+          otherInput.classList.add('hidden');
+          otherInput.value = '';
+        }
+      }
+    }
   });
 });
 
 function getSelectedChips(containerId) {
   var chips = document.querySelectorAll('#' + containerId + ' .chip.selected');
-  return Array.from(chips).map(function(c) { return c.dataset.value; });
+  var values = Array.from(chips).map(function(c) { return c.dataset.value; });
+  // Replace "other" with the actual typed text
+  var otherInput = document.getElementById(containerId.replace('s', 's') + '-other-input');
+  // Try the correct ID pattern
+  if (containerId === 'focus-areas') otherInput = document.getElementById('focus-other-input');
+  if (containerId === 'goals') otherInput = document.getElementById('goals-other-input');
+  if (otherInput && otherInput.value.trim() && values.indexOf('other') !== -1) {
+    values = values.filter(function(v) { return v !== 'other'; });
+    values.push(otherInput.value.trim());
+  }
+  return values;
 }
 
 // ── Form submission ───────────────────────────────────────────

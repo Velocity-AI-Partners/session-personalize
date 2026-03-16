@@ -100,6 +100,11 @@ body {
   color: #ffffff;
 }
 
+/* Other input (shown when Other chip is selected) */
+.other-input {
+  margin-top: 10px;
+}
+
 /* Textareas */
 textarea {
   width: 100%;
