@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalize Your Session</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header with location logo -->
+    <header class="header">
+      <img id="location-logo" class="logo" src="" alt="Studio Logo">
+      <h1>Personalize Your Session</h1>
+      <p class="subtitle" id="booking-summary"></p>
+    </header>
+
+    <!-- Form -->
+    <form id="personalize-form" novalidate>
+      <!-- 1. Focus Areas (multi-select chips) -->
+      <div class="field-group">
+        <label class="field-label">Where would you like us to focus?</label>
+        <p class="field-hint">Select all areas that apply</p>
+        <div class="chip-grid" id="focus-areas">
+          <button type="button" class="chip" data-value="neck">Neck</button>
+          <button type="button" class="chip" data-value="shoulders">Shoulders</button>
+          <button type="button" class="chip" data-value="upper-back">Upper Back</button>
+          <button type="button" class="chip" data-value="lower-back">Lower Back</button>
+          <button type="button" class="chip" data-value="hips">Hips</button>
+          <button type="button" class="chip" data-value="hamstrings">Hamstrings</button>
+          <button type="button" class="chip" data-value="legs">Legs</button>
+          <button type="button" class="chip" data-value="full-body">Full Body</button>
+        </div>
+      </div>
+
+      <!-- 2. Goals (multi-select chips) -->
+      <div class="field-group">
+        <label class="field-label">What are your goals?</label>
+        <p class="field-hint">Select all that apply</p>
+        <div class="chip-grid" id="goals">
+          <button type="button" class="chip" data-value="flexibility">Improve Flexibility</button>
+          <button type="button" class="chip" data-value="pain-relief">Pain Relief</button>
+          <button type="button" class="chip" data-value="athletic-recovery">Athletic Recovery</button>
+          <button type="button" class="chip" data-value="stress-relief">Stress Relief</button>
+          <button type="button" class="chip" data-value="posture">Posture Improvement</button>
+          <button type="button" class="chip" data-value="range-of-motion">Range of Motion</button>
+        </div>
+      </div>
+
+      <!-- 3. Injuries / Medical Conditions -->
+      <div class="field-group">
+        <label class="field-label" for="injuries">Any injuries or medical conditions?</label>
+        <p class="field-hint">Surgeries, joint replacements, chronic conditions, current pain areas</p>
+        <textarea id="injuries" name="injuries" rows="3" placeholder="e.g., Had knee surgery last year, mild lower back pain..."></textarea>
+      </div>
+
+      <!-- 4. Physical Activity -->
+      <div class="field-group">
+        <label class="field-label" for="activity">What physical activities do you do?</label>
+        <p class="field-hint">Exercise habits, sports, frequency</p>
+        <textarea id="activity" name="activity" rows="2" placeholder="e.g., Run 3x/week, play tennis on weekends, weight training..."></textarea>
+      </div>
+
+      <!-- 5. Stretch Intensity -->
+      <div class="field-group">
+        <label class="field-label">Preferred stretch intensity</label>
+        <div class="intensity-options" id="intensity">
+          <label class="intensity-card">
+            <input type="radio" name="intensity" value="light">
+            <div class="intensity-content">
+              <span class="intensity-icon">&#x1f33f;</span>
+              <span class="intensity-name">Light</span>
+              <span class="intensity-desc">Gentle, relaxing</span>
+            </div>
+          </label>
+          <label class="intensity-card">
+            <input type="radio" name="intensity" value="moderate" checked>
+            <div class="intensity-content">
+              <span class="intensity-icon">&#x2696;&#xfe0f;</span>
+              <span class="intensity-name">Moderate</span>
+              <span class="intensity-desc">Balanced stretch</span>
+            </div>
+          </label>
+          <label class="intensity-card">
+            <input type="radio" name="intensity" value="deep">
+            <div class="intensity-content">
+              <span class="intensity-icon">&#x1f4aa;</span>
+              <span class="intensity-name">Deep</span>
+              <span class="intensity-desc">Intensive, max range</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- 6. Lifestyle / Occupation -->
+      <div class="field-group">
+        <label class="field-label" for="lifestyle">Tell us about your lifestyle</label>
+        <p class="field-hint">Desk job? On your feet all day? This helps us understand your tightness patterns</p>
+        <textarea id="lifestyle" name="lifestyle" rows="2" placeholder="e.g., Desk job 8hrs/day, drive a lot, stay-at-home parent..."></textarea>
+      </div>
+
+      <!-- 7. Special Requests -->
+      <div class="field-group">
+        <label class="field-label" for="notes">Anything else your practitioner should know?</label>
+        <textarea id="notes" name="notes" rows="2" placeholder="e.g., I prefer to keep conversation minimal, I run cold so keep the room warm..."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn" id="submit-btn">
+        <span id="btn-text">Submit Preferences</span>
+        <span id="btn-loading" class="hidden">Submitting...</span>
+      </button>
+    </form>
+
+    <!-- Success state -->
+    <div id="success-screen" class="hidden">
+      <div class="success-content">
+        <div class="success-icon">&#x2705;</div>
+        <h2>You're all set!</h2>
+        <p>Your practitioner will review your preferences before your session. We look forward to seeing you!</p>
+      </div>
+    </div>
+
+    <!-- Error state -->
+    <div id="error-message" class="error-banner hidden">
+      Something went wrong. Please try again.
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
