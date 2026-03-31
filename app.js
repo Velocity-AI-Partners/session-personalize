@@ -2,7 +2,7 @@
 const WEBHOOK_URL = 'https://velocityaipartners.app.n8n.cloud/webhook/session-personalize';
 
 const SUPABASE_URL = 'https://jjckotsrhuxxftwmdlwc.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpqY2tvdHNyaHV4eGZ0d21kbHdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY0NzU1ODIsImV4cCI6MjA1MjA1MTU4Mn0.GFaaGXBkFr9gy3WuRLqB-Y1kBWBygX6sJFJmX_KJ_iE';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpqY2tvdHNyaHV4eGZ0d21kbHdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc4MTU4ODUsImV4cCI6MjA4MzM5MTg4NX0.AAQSDK4gu7lDUrFFk540HHELQ85S0vyATNQT6up-pXE';
 
 const LOGO_BASE = SUPABASE_URL + '/storage/v1/object/public/location-logos/logos/';
 
