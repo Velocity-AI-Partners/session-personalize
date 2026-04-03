@@ -39,6 +39,7 @@ const bookingTime = params.get('time') || '';
 const instructor = params.get('instructor') || '';
 const memberId = params.get('member_id') || '';
 const bookingId = params.get('booking_id') || '';
+const userId = params.get('user_id') || params.get('lid') || params.get('customerId') || '';
 
 // ── Populate header ───────────────────────────────────────────
 const loc = LOCATIONS[locationSlug];
@@ -123,6 +124,7 @@ form.addEventListener('submit', function(e) {
     customer_name: customerName,
     customer_phone: customerPhone,
     member_id: memberId,
+    user_id: userId,
     booking_id: bookingId,
     booking_date: bookingDate,
     booking_time: bookingTime,
