@@ -68,6 +68,16 @@ document.querySelectorAll('.chip-grid').forEach(function(grid) {
   grid.addEventListener('click', function(e) {
     var chip = e.target.closest('.chip');
     if (!chip) return;
+
+    if (grid.id === 'budget') {
+      var wasSelected = chip.classList.contains('selected');
+      grid.querySelectorAll('.chip.selected').forEach(function(c) {
+        c.classList.remove('selected');
+      });
+      if (!wasSelected) chip.classList.add('selected');
+      return;
+    }
+
     chip.classList.toggle('selected');
 
     // Toggle "Other" input visibility
@@ -116,6 +126,7 @@ form.addEventListener('submit', function(e) {
 
   var focusAreas = getSelectedChips('focus-areas');
   var goals = getSelectedChips('goals');
+  var budgetChips = getSelectedChips('budget');
 
   var payload = {
     location_slug: locationSlug,
@@ -132,6 +143,7 @@ form.addEventListener('submit', function(e) {
     goals: goals,
     injuries: document.getElementById('injuries').value.trim(),
     activity: document.getElementById('activity').value.trim(),
+    budget: budgetChips.length > 0 ? budgetChips[0] : null,
     lifestyle: document.getElementById('lifestyle').value.trim(),
     notes: document.getElementById('notes').value.trim(),
     submitted_at: new Date().toISOString()
@@ -165,6 +177,7 @@ form.addEventListener('submit', function(e) {
       goals: payload.goals,
       injuries: payload.injuries || null,
       activity: payload.activity || null,
+      budget: payload.budget,
       lifestyle: payload.lifestyle || null,
       notes: payload.notes || null
     })

@@ -75,7 +75,20 @@
         <textarea id="lifestyle" name="lifestyle" rows="2" placeholder="e.g., Desk job 8hrs/day, drive a lot, stay-at-home parent..."></textarea>
       </div>
 
-      <!-- 7. Special Requests -->
+      <!-- 7. Monthly Budget -->
+      <div class="field-group">
+        <label class="field-label" for="budget">Do you have a monthly wellness budget in mind?</label>
+        <p class="field-hint">Totally optional, just helps us recommend the right plan for you</p>
+        <div class="chip-grid" id="budget">
+          <button type="button" class="chip" data-value="under-100">Under $100</button>
+          <button type="button" class="chip" data-value="100-200">$100 - $200</button>
+          <button type="button" class="chip" data-value="200-300">$200 - $300</button>
+          <button type="button" class="chip" data-value="300-plus">$300+</button>
+          <button type="button" class="chip" data-value="not-sure">Not sure yet</button>
+        </div>
+      </div>
+
+      <!-- 8. Special Requests -->
       <div class="field-group">
         <label class="field-label" for="notes">Anything else your practitioner should know?</label>
         <textarea id="notes" name="notes" rows="2" placeholder="e.g., I prefer to keep conversation minimal, I run cold so keep the room warm..."></textarea>
