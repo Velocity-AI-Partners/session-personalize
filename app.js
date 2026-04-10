@@ -116,7 +116,6 @@ form.addEventListener('submit', function(e) {
 
   var focusAreas = getSelectedChips('focus-areas');
   var goals = getSelectedChips('goals');
-  var intensity = document.querySelector('input[name="intensity"]:checked');
 
   var payload = {
     location_slug: locationSlug,
@@ -133,7 +132,6 @@ form.addEventListener('submit', function(e) {
     goals: goals,
     injuries: document.getElementById('injuries').value.trim(),
     activity: document.getElementById('activity').value.trim(),
-    intensity: intensity ? intensity.value : 'moderate',
     lifestyle: document.getElementById('lifestyle').value.trim(),
     notes: document.getElementById('notes').value.trim(),
     submitted_at: new Date().toISOString()
@@ -167,7 +165,6 @@ form.addEventListener('submit', function(e) {
       goals: payload.goals,
       injuries: payload.injuries || null,
       activity: payload.activity || null,
-      intensity: payload.intensity,
       lifestyle: payload.lifestyle || null,
       notes: payload.notes || null
     })

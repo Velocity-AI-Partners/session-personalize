@@ -131,65 +131,6 @@ textarea::placeholder {
   color: #888888;
 }
 
-/* Intensity cards */
-.intensity-options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.intensity-card {
-  cursor: pointer;
-}
-
-.intensity-card input[type="radio"] {
-  display: none;
-}
-
-.intensity-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: 20px 8px 16px;
-  border: 1.5px solid #e0e0e0;
-  border-radius: 16px;
-  background: #f7f7f8;
-  transition: all 0.2s ease;
-  text-align: center;
-}
-
-.intensity-card:hover .intensity-content {
-  border-color: #b0b0b0;
-  background: #eeeeef;
-}
-
-.intensity-card input:checked + .intensity-content {
-  border-color: #000000;
-  background: #000000;
-  color: #ffffff;
-}
-
-.intensity-card input:checked + .intensity-content .intensity-name,
-.intensity-card input:checked + .intensity-content .intensity-desc {
-  color: #ffffff;
-}
-
-.intensity-icon {
-  font-size: 28px;
-}
-
-.intensity-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #000000;
-}
-
-.intensity-desc {
-  font-size: 11px;
-  color: #000000;
-}
-
 /* Submit button */
 .submit-btn {
   width: 100%;
@@ -275,14 +216,6 @@ textarea::placeholder {
 
   .header h1 {
     font-size: 20px;
-  }
-
-  .intensity-options {
-    gap: 8px;
-  }
-
-  .intensity-content {
-    padding: 16px 4px 12px;
   }
 
   .chip {
