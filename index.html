@@ -18,6 +18,30 @@
       <p class="subtitle" id="booking-summary"></p>
     </header>
 
+    <!-- Appointment details card (hidden if no date/time in URL) -->
+    <section id="appointment-card" class="appointment-card" style="display:none">
+      <h2 class="card-title">Your Session</h2>
+      <div class="booking-details">
+        <div class="detail-row">
+          <span class="detail-label">Date</span>
+          <span id="appt-date" class="detail-value"></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Time</span>
+          <span id="appt-time" class="detail-value"></span>
+        </div>
+        <div class="detail-row" id="appt-address-row" style="display:none">
+          <span class="detail-label">Location</span>
+          <span id="appt-address" class="detail-value"></span>
+        </div>
+        <div class="detail-row" id="appt-instructor-row" style="display:none">
+          <span class="detail-label">Practitioner</span>
+          <span id="appt-instructor" class="detail-value"></span>
+        </div>
+      </div>
+      <div id="calendar-buttons"></div>
+    </section>
+
     <!-- Form -->
     <form id="personalize-form" novalidate>
       <!-- 1. Focus Areas (multi-select chips) -->
