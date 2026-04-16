@@ -49,6 +49,110 @@ body {
   line-height: 1.5;
 }
 
+/* Appointment card */
+.appointment-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #000000;
+  letter-spacing: -0.2px;
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 13px;
+  color: #888888;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* Calendar buttons */
+.cal-buttons {
+  margin-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 16px;
+}
+
+.cal-buttons .cal-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+.cal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: #ffffff;
+}
+
+.cal-btn:active {
+  transform: scale(0.98);
+}
+
+.cal-btn-google {
+  background: #4285F4;
+}
+
+.cal-btn-apple {
+  background: #0F1111;
+}
+
+.cal-loading {
+  font-size: 13px;
+  color: #888888;
+  padding: 8px 0;
+}
+
 /* Field groups */
 .field-group {
   margin-bottom: 28px;
@@ -220,6 +324,14 @@ textarea::placeholder {
 
   .chip {
     padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .appointment-card {
+    padding: 16px;
+  }
+
+  .detail-value {
     font-size: 13px;
   }
 }
